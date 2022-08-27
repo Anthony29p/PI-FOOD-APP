@@ -1,0 +1,35 @@
+.home {
+    display: grid;
+    background: url('https://cdn.pixabay.com/photo/2016/03/15/02/42/floor-1256804_1280.jpg');
+    
+}
+
+.home > nav {
+    display: grid;
+    /* justify-content: center; */
+    justify-items: center;
+    margin-bottom: 1%;
+}
+
+.home > nav >h1{
+    
+    max-width: 80%;
+    color: white
+}
+
+.home > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+    
+
+}
+/*  */
+.containerCard{
+    
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding: 0 0 0 50px;
+}

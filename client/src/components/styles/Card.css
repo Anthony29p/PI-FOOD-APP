@@ -1,0 +1,35 @@
+.card{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr  0.2fr  1fr ;
+    width: 80%;
+    height: 100%;
+    justify-items: center;
+    justify-content: center;
+    /* border: 10px; */
+    /* text-decoration: none; */
+    border: 2px solid rgb(46, 46, 84);
+    background-color: #00000066;
+    border-radius: 3%;
+}
+
+/* .card >p{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-decoration: none;
+    justify-content: center;
+    justify-items: center;
+    
+} */
+
+.card >img{
+    width: 95%;
+    border-radius: 3%;
+}
+
+.card >p{
+    color: bisque;
+    text-size-adjust: auto;
+    text-decoration: none;
+}

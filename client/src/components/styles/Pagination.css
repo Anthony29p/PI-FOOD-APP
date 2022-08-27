@@ -1,0 +1,17 @@
+
+
+.nav > ul{
+    display: flex;
+    justify-content: center;
+}
+
+.nav > ul >li{
+    list-style:none
+}
+
+.nav > ul >li >button{
+    /* padding: 10px 20px; */
+    color: #fff;
+    background-color: #024959;
+    text-decoration: none;
+}
