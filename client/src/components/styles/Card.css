@@ -1,9 +1,9 @@
 .card{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr  0.2fr  1fr ;
-    width: 80%;
-    height: 100%;
+    grid-template-rows: 0.4fr  0.2fr  1fr ;
+    width: 300px;
+    height: 350px;
     justify-items: center;
     justify-content: center;
     /* border: 10px; */
@@ -11,6 +11,9 @@
     border: 2px solid rgb(46, 46, 84);
     background-color: #00000066;
     border-radius: 3%;
+
+    padding: 5px;
+    margin: 5px;
 }
 
 /* .card >p{
@@ -24,7 +27,7 @@
 } */
 
 .card >img{
-    width: 95%;
+    width: 99%;
     border-radius: 3%;
 }
 

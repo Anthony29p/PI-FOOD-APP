@@ -1,12 +1,22 @@
-
+nav{
+    display: flex;
+    justify-content: center;
+    
+}
 
 .nav > ul{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    min-width: 350px;
+    width: 50%;
+
+    border: 2px white solid;
 }
 
 .nav > ul >li{
-    list-style:none
+    list-style:none;
 }
 
 .nav > ul >li >button{
@@ -14,4 +24,7 @@
     color: #fff;
     background-color: #024959;
     text-decoration: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
 }
