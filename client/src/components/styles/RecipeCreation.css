@@ -1,21 +1,34 @@
 .recipeCreation{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2% 8% 85%;
-    justify-items: center;
-    /* align-items: flex-start; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
     background: url('https://cdn.pixabay.com/photo/2015/10/05/15/27/pizza-972782_1280.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    /* overflow: hidden; */
 }
 
-.recipeCreation > img{
-    height: 100%;
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 2px white solid;
+    min-width: 340px;
+    width: 90%;
+    height: 20%;
+    padding: 0px 20px;
 }
 
+.navigation > img{
+    height: 70px;
+}
 
-.recipeCreation > form{
+.recipeCreation > form {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -25,56 +38,59 @@
     border: 1px solid blue;
     width: 50%;
     min-width: 250px;
-    min-height: 350px;
-    height: 100%;
-}
-
-.recipeCreation > form > div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: 300px;
     
 }
-.recipeCreation > form > div >label{
+.recipeCreation > form > div {
+    display: flex;
+    text-align: center;
+    align-items: flex-start;
+    flex-direction: column;
     color: white;
+    border: 2px red solid
 }
 
-.recipeCreation > form > div >input{
-    color: black;
+.recipeCreation > form > div >label{
+    
+    color: white;
 }
 
 .recipeCreation > form > div >span{
     color: red;
-}
-
-
-.recipeCreation > form > div {
-    display: flex;
-}
-
-.recipeCreation > form > div >p{
-    margin: 1px;
+    
 }
 
 .dietillas {
     display: flex;
-    width: 100%;
-    height: 100%;
     flex-wrap: wrap;
-    /* flex-direction:row; */
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    min-height: 50%;
 
+    padding-top: 10px;
+
+    border: 5px green solid;
 }
 
 .dietillas > div {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+
+    width: 200px;
+    height: 50px;
+
+    padding: 5px;
+    border: 2px red solid;
 }
 .dietillas > div >p{
     color: white;
-    font-size: 80%;
+    font-size: 15px;
+    
 }
 .dietillas > div >button{
-    height: 50%;
+    width: 20px;
+    height: 20px;
     font-size: 80%;
 }
