@@ -84,7 +84,9 @@ export default function Home(){
         <div className="home">
             <nav className="navbar">
                 <h1>HOME</h1>
-                <Link to='/recipes' style={{textDecoration:"none"}}>Create Recipe</Link>
+                <Link to='/recipes' style={{textDecoration:"none"}}>
+                    <button>Create Recipe</button>
+                </Link>
                 <SearchBar/>
             </nav>
             <div className="container">
@@ -132,6 +134,7 @@ export default function Home(){
                     recipesPerPage={recipesPerPage}
                     allRecipes={allRecipes.length}
                     pagination={pagination}
+                    currentPage={currentPage}
                 />
                 {
                     currentRecipes?.map(e =>{

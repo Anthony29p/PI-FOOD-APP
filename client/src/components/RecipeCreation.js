@@ -84,7 +84,9 @@ export default function RecipeCreation(){
         <div className="recipeCreation">
             <div className="navigation">
                 <img src={gato} alt=""/>
-                <Link to='/home'>Return to Home</Link>
+                <Link to='/home'>
+                    <button>Return to Home</button>
+                </Link>
             </div>
             <form>  
                 <div>
@@ -117,7 +119,7 @@ export default function RecipeCreation(){
                     </select>
                     <span>{errorValidation.diet}</span>
                 </div>
-                <button type="submit" disabled={!(errorValidation.name===""&&errorValidation.description===""&&errorValidation.healthScore===""&&errorValidation.howToDo==="")} onClick={onSubmit}>Send</button>
+                <button type="submit" disabled={!(errorValidation.name===""&&errorValidation.description===""&&errorValidation.healthScore===""&&errorValidation.howToDo==="")} onClick={onSubmit}>Create</button>
             </form>
             <div className="dietillas">
                 {

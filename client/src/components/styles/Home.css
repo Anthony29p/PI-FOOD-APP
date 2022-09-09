@@ -23,7 +23,7 @@
     
     max-width: 80%;
     color: white
-}
+} 
 
 @media screen and ( max-width: 550px) {
     .container{
@@ -34,7 +34,7 @@
         flex-wrap: wrap;
     
         padding: 10px;
-        border: 2px white solid;
+        /* border: 2px white solid; */
     
     }
 }
@@ -46,7 +46,7 @@
     justify-content: center;
 
     padding: 10px;
-    border: 2px white solid;
+    /* border: 2px white solid; */
 
 }
 }
@@ -63,7 +63,8 @@
     padding: 5px;
 
     border-radius: 5px;
-    border: 2px white solid;
+    /* border: 2px white solid; */
+
 }
 
 .filters > select{
@@ -79,6 +80,15 @@
     justify-content: space-around;
     align-items: space-around;
 
-    border: 2px white solid;
-    
+    /* border: 2px white solid; */
+     
+}
+
+div > nav > a >button{
+height: 40px;
+padding: 10px;
+background-color: rgb(22, 20, 20);
+border: 0px;
+border-radius: 4px;
+color: white;
 }
