@@ -82,9 +82,13 @@ export default function RecipeCreation(){
 
     return(
         <div className="recipeCreation">
-            <Link to='/home'>Return to Home</Link>
-            <img src={gato} alt=""/>
-            <form>
+            <div className="navigation">
+                <img src={gato} alt=""/>
+                <Link to='/home'>
+                    <button>Return to Home</button>
+                </Link>
+            </div>
+            <form>  
                 <div>
                     <label>Recipe's Name</label>
                     <input type="text" placeholder="Recipe's Name" name="name" onChange={handleChange} value={newRecipe.name}/>
@@ -115,8 +119,9 @@ export default function RecipeCreation(){
                     </select>
                     <span>{errorValidation.diet}</span>
                 </div>
-                <button type="submit" disabled={!(errorValidation.name===""&&errorValidation.description===""&&errorValidation.healthScore===""&&errorValidation.howToDo==="")} onClick={onSubmit}>Send</button>
-                <div className="dietillas">
+                <button type="submit" disabled={!(errorValidation.name===""&&errorValidation.description===""&&errorValidation.healthScore===""&&errorValidation.howToDo==="")} onClick={onSubmit}>Create</button>
+            </form>
+            <div className="dietillas">
                 {
                     newRecipe.diet.length>0?newRecipe.diet.map(d =>(
                         <div>
@@ -126,8 +131,7 @@ export default function RecipeCreation(){
                     )):
                     <span></span>
                 }
-                </div>
-            </form>
+            </div>
         </div>       
     )
 }

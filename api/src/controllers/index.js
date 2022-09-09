@@ -1,7 +1,7 @@
 
 const { Recipe, Diet } = require('../db')
-const { API_KEY08 } = process.env
-const API_KEY = API_KEY08;
+const { API_KEY01 } = process.env
+const API_KEY = API_KEY01;
 
 const axios = require('axios')
 const nRecetas = 100;

@@ -1,80 +1,147 @@
 .recipeCreation{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2% 8% 85%;
-    justify-items: center;
-    /* align-items: flex-start; */
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: flex-start;
+    align-items: center;
     background: url('https://cdn.pixabay.com/photo/2015/10/05/15/27/pizza-972782_1280.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    /* overflow: hidden; */
 }
 
-.recipeCreation > img{
-    height: 100%;
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-width: 340px;
+    width: 90%;
+    height: 20%;
+
+    padding: 20px 20px 30px;
+    /* border: 2px white solid; */
 }
 
+.navigation > img{
+    height: 70px;
+}
+.navigation >a> button{
+    height: 40px;
+    padding: 10px;
+    background-color: rgb(22, 20, 20);
+    border-radius: 4px;
+    color: white;
+    border: 0px;
+}
 
-.recipeCreation > form{
+.recipeCreation > form {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     align-items: center;
     background-color: #00000066;
+    
+    width: 90%;
+    min-width: 250px;
+    min-height: 400px;
+
     border-radius: 3%;
     border: 1px solid blue;
-    width: 50%;
-    min-width: 250px;
-    min-height: 350px;
-    height: 100%;
-}
-
-.recipeCreation > form > div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding-bottom: 10px;
     
 }
-.recipeCreation > form > div >label{
-    color: white;
+
+@media screen and ( min-width: 800px) {
+    .recipeCreation > form {
+        width: 720px;
+    }
+    .recipeCreation > form > div >select{
+        width: 480px;
+    }
 }
 
-.recipeCreation > form > div >input{
-    color: black;
+@media screen and ( max-width: 360px) {
+    .recipeCreation > form > div >select{
+        width: 216px;
+    }
 }
-
-.recipeCreation > form > div >span{
-    color: red;
-}
-
 
 .recipeCreation > form > div {
     display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 80%;
+
+    color: white;
+    padding-top: 5px;
+    margin-bottom: 15px;
+    
 }
 
-.recipeCreation > form > div >p{
-    margin: 1px;
+.recipeCreation > form > div >label{
+    padding-bottom: 5px;
+    color: white;
+    font-size: 17px;
+}
+
+.recipeCreation > form > div >input{
+    width: 80%;
+    height: 25px;
+}
+
+.recipeCreation > form > div >span{
+    background-color: red ;
+    color: white;
+    padding: 2px;
+    margin: 4px;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+.recipeCreation > form > div >select{
+    width: 60%;
+    height: 35px;
+}
+
+.recipeCreation > form > button{
+    width: 150px;
+    height: 35px;
 }
 
 .dietillas {
     display: flex;
-    width: 100%;
-    height: 100%;
     flex-wrap: wrap;
-    /* flex-direction:row; */
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    min-height: 50%;
+
+    padding-top: 40px;
 
 }
 
 .dietillas > div {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+
+    width: 200px;
+    height: 50px;
+
+    padding: 10px 20px;
 }
 .dietillas > div >p{
     color: white;
-    font-size: 80%;
+    font-size: 15px;
+    
 }
 .dietillas > div >button{
-    height: 50%;
+    width: 20px;
+    height: 20px;
     font-size: 80%;
 }
