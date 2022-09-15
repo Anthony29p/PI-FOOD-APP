@@ -29,7 +29,7 @@ router.get('/', async (req,res) =>{
 // Uncomplete task
 
 router.get('/:idReceta', async (req,res) =>{
-    const {idReceta} = req.params;
+    const {idReceta} = req.params || {}
 
     const recetas = await getAllRecipes();
     try{

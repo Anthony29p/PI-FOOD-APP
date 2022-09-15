@@ -4,8 +4,10 @@
     /* flex-wrap: wrap; */
     justify-content: flex-start;
     align-items: center;
-    background: url('https://cdn.pixabay.com/photo/2015/10/05/15/27/pizza-972782_1280.jpg');
+    background: url('https://cdn.discordapp.com/attachments/1005186345397927980/1019653641130475560/unknown.png');
+    /* background: url('https://cdn.pixabay.com/photo/2015/10/05/15/27/pizza-972782_1280.jpg'); */
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     
     width: 100%;

@@ -4,7 +4,8 @@
 }
 
 .home {
-    background: url('https://cdn.pixabay.com/photo/2016/03/15/02/42/floor-1256804_1280.jpg');
+    background: url('https://cdn.discordapp.com/attachments/1005186345397927980/1019653269917814874/unknown.png');
+    /* background: url('https://cdn.pixabay.com/photo/2016/03/15/02/42/floor-1256804_1280.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -17,6 +18,7 @@
     justify-content: space-between;
     align-items:center;
     margin-bottom: 1%;
+    padding: 0px 30px;
 }
 
 .navbar >h1{
