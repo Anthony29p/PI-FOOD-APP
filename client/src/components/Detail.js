@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import { getRecipesByID } from "../actions";
 
 import './styles/Detail.css';
-import menu from './resources/menu.png';
 import paella from './resources/paella.jpg';
 
 export default function Detail (){
@@ -25,12 +24,20 @@ export default function Detail (){
 
     return(
         <div className="detail">
-            <img src={menu} alt=""></img>
-            {
+            <div className="back">
+                <Link to="/home">
+                    <button>Return to Home</button>
+                </Link>
+            </div>
+            { 
                 detail.length>0?    
                 <div className="menu">
                     <div className="section01">
                         <h1>{detail[0].name}</h1>
+                        <h5>{detail[0].description}</h5>
+                    </div>
+                    <div className="section02">
+                        <h5>Health Score: {detail[0].healthScore}%</h5>
                         <div>
                         {
                             detail[0].createdAt?
@@ -42,11 +49,6 @@ export default function Detail (){
                             ))
                         }
                         </div>
-                        <h5>{detail[0].description}</h5>
-                    </div>
-                    <div className="section02">
-                        <h5>Health Score: {detail[0].healthScore}%</h5>
-
                         {detail[0].createdAt?
                         <img src = {paella} alt =''/>:
                         <img src = {detail[0].image} alt =''/>
@@ -56,9 +58,6 @@ export default function Detail (){
                 <div></div>
 
             }
-        <Link to="/home">
-            <button>Return to Home</button>
-        </Link>
         </div>
     )
 }
