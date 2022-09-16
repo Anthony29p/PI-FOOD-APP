@@ -24,9 +24,18 @@ module.exports = (sequelize) => {
       type: DataTypes.FLOAT,
       allowNull: true,
     },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     howToDo: {
       type: DataTypes.TEXT,
       allowNull: true,
+    },
+    createdDB: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+      defaultValue: true,
     },
   }); 
 };
