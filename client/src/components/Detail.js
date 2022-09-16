@@ -49,7 +49,7 @@ export default function Detail (){
                             ))
                         }
                         </div>
-                        {detail[0].createdAt?
+                        {detail[0].createdDB?
                         <img src = {paella} alt =''/>:
                         <img src = {detail[0].image} alt =''/>
                         }

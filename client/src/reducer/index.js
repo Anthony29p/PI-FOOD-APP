@@ -43,7 +43,7 @@ function rootReducer(state = initialState,action){
 
         case FILTER_BY_DIET:
             const allRecipes = state.recipesCopy;
-            const filterByDiet = action.payload === "all"?allRecipes:allRecipes.filter(el => el.diets?.some(d => d === action.payload))
+            const filterByDiet = action.payload === "all"?allRecipes:allRecipes.filter(el => el.diets?.some(d => d.name === action.payload))
             return{
                 ...state,
                 recipes: filterByDiet
@@ -59,9 +59,9 @@ function rootReducer(state = initialState,action){
 
         case FILTER_BY_SOURCE:
             const recipes = state.recipesCopy;
-            const filterBySource = action.payload === "creado"?recipes.filter(el =>el.createdAt):recipes.filter(el =>!el.createdAt)
+            const filterBySource = action.payload === "creado"?recipes.filter(el =>el.createdDB):recipes.filter(el =>!el.createdDB)
             return{
-                ...state,
+                ...state, 
                 recipes: action.payload === "todo"?recipes:filterBySource
             }
 
