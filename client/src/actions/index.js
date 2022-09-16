@@ -11,11 +11,12 @@ export const ORDER_BY_SCORE ='ORDER_BY_SCORE';
 export const POST_RECIPES = 'POST_RECIPES';
 export const FILTER_BY_SCORE = 'FILTER_BY_SCORE';
 
-
+// const urlBase ="http://localhost:3001"
+const urlBase ="https://back-pi-production.up.railway.app"
 
 export function getRecipes(){
     return async function(dispatch){
-        var json = await axios.get("http://localhost:3001/recipes")
+        var json = await axios.get(`${urlBase}/recipes`)
 
         return dispatch({
             type: GET_RECIPES,
@@ -27,7 +28,7 @@ export function getRecipes(){
 export function getRecipesByName(name){
     return async function(dispatch){
         try{
-        var json = await axios.get(`http://localhost:3001/recipes?name=${name}`)
+        var json = await axios.get(`${urlBase}/recipes?name=${name}`)
 
         return dispatch({
             type: GET_RECIPES_BY_NAME,
@@ -41,7 +42,7 @@ export function getRecipesByName(name){
 export function getRecipesByID(id){
     return async function(dispatch){
         try{
-        var json = await axios.get(`http://localhost:3001/recipes/${id}`)
+        var json = await axios.get(`${urlBase}/recipes/${id}`)
 
         return dispatch({
             type: GET_RECIPES_BY_ID,
@@ -54,7 +55,7 @@ export function getRecipesByID(id){
 
 export function getDiets(){
     return async function(dispatch){
-        var json = await axios.get('http://localhost:3001/diets')
+        var json = await axios.get(`${urlBase}/diets`)
 
         return dispatch({
             type: GET_DIETS,
@@ -66,7 +67,7 @@ export function getDiets(){
 export function postRecipes(payload){
     return async function(dispatch){
         try{
-        var post = await axios.post("http://localhost:3001/recipes",payload)
+        var post = await axios.post(`${urlBase}/recipes`,payload)
         return post
         }
         catch(error){console.log(error)}
