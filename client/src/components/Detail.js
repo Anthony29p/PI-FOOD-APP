@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link,useParams } from 'react-router-dom'
 
 import { useDispatch,useSelector } from 'react-redux'
@@ -8,12 +8,18 @@ import { getRecipesByID } from "../actions";
 
 import './styles/Detail.css';
 import paella from './resources/paella.jpg';
+import Loader from "./Loader";
 
 export default function Detail (){
     const dispatch = useDispatch();
     const { id }  = useParams();
     
+    const [charge, setCharge] = useState(true)
+
     useEffect(() =>{
+        setTimeout(() => {
+          setCharge(false);
+        }, 800);
         dispatch(getRecipesByID(id))
     },[id])
 
@@ -21,12 +27,14 @@ export default function Detail (){
 
     console.log(detail)
 
-
     return(
+        charge?
+        <Loader/>
+        :
         <div className="detail">
             <div className="back">
                 <Link to="/home">
-                    <button>Return to Home</button>
+                    <button className="btn02">Return to Home</button>
                 </Link>
             </div>
             { 
@@ -42,7 +50,7 @@ export default function Detail (){
                         {
                             detail[0].createdAt?
                             detail[0].diets.map(d =>(
-                                <h4>{d.name}</h4>
+                                <h4 key={d.id}>{d.name}</h4>
                             )):
                             detail[0].diets.map(d =>(
                                 <h4>{d}</h4>

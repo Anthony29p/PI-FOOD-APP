@@ -4,11 +4,12 @@ import {useSelector, useDispatch} from 'react-redux';
 
 import {Link} from 'react-router-dom'
 
-import { getRecipes, filterRecipes, filterSource,filterScore, orderName, orderScore, getDiets } from "../actions";
+import { getRecipes, filterRecipes, filterSource,filterScore, orderName, orderScore } from "../actions";
 
 import Card from "./Card";
 import Pagination from "./Pagination";
 import SearchBar from "./SearchBar";
+import Loader from "./Loader";
 
 import './styles/Home.css';
 
@@ -22,6 +23,7 @@ export default function Home(){
     const [recipesPerPage,setRecipesPerPage] =useState(9)
 
     const [order,setOrder] =useState("")
+    const [charge, setCharge] = useState(true)
 
     const indexOfLastRecipe = currentPage*recipesPerPage
     const indexOfFirstRecipe =indexOfLastRecipe - recipesPerPage
@@ -33,8 +35,13 @@ export default function Home(){
 
     // Reinicio de recetas 
     useEffect(() =>{
+        // setCharge(true);
+        setTimeout(() => {
+            setCharge(false);
+        }, 500);
         dispatch(getRecipes());
     },[]) 
+    
 
     // Parche para usar creacion de recetas
     
@@ -79,8 +86,11 @@ export default function Home(){
         dispatch(orderScore(e.target.value))
         setOrder(`ordenado ${e.target.value}`)
     }
-
+    
     return(
+        charge?
+        <Loader/>
+        :
         <div className="home">
             <nav className="navbar">
                 <h1>HOME</h1>
