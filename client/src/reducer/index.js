@@ -1,4 +1,4 @@
-import { GET_RECIPES, GET_RECIPES_BY_NAME, POST_RECIPES, FILTER_BY_DIET, FILTER_BY_SOURCE,FILTER_BY_SCORE, ORDER_BY_NAME, ORDER_BY_SCORE, GET_RECIPES_BY_ID, GET_DIETS } from "../actions"; 
+import { GET_RECIPES, GET_RECIPES_BY_NAME, POST_RECIPES, FILTER_BY_DIET, FILTER_BY_SOURCE,FILTER_BY_SCORE, ORDER_BY_NAME, ORDER_BY_SCORE, GET_RECIPES_BY_ID, GET_DIETS, LOADER } from "../actions"; 
 
 
 
@@ -6,7 +6,7 @@ const initialState = {
     recipes : [],
     recipesCopy : [],
     detail: [],
-    diets : []
+    diets : [],
 }
 
 function rootReducer(state = initialState,action){
@@ -39,7 +39,7 @@ function rootReducer(state = initialState,action){
         case POST_RECIPES:
             return{
                 ...state
-            } 
+            }
 
         case FILTER_BY_DIET:
             const allRecipes = state.recipesCopy;
