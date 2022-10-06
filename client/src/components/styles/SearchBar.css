@@ -1,0 +1,17 @@
+.formulario{
+    display: flex;
+    
+}
+
+form{
+    display: flex;
+    /* justify-content: space-around; */
+/* 
+    width: 10rem; */
+}
+
+.BsSearch{
+    color: white;
+    /* padding-top: 0.5rem; */
+    /* height: 100%; */
+}

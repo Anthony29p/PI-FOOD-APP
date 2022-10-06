@@ -3,24 +3,35 @@ import { useDispatch } from 'react-redux'
 
 import { getRecipesByName } from '../actions';
 
+import './styles/SearchBar.css';
+import { BsSearch } from "react-icons/bs";
+
 export default function SearchBar(){
     
     const dispatch = useDispatch()
+    const [ open , setOpen ] = useState(false);
     const [consulta,setConsulta] = useState("");
 
     function onSearch(e){
-        e.preventDefault();
-        dispatch(getRecipesByName(consulta))
+        dispatch(getRecipesByName(e))
     }
 
     return(
-        <form onSubmit={e => {onSearch(e)}}>
-            <input
-                type="text"
-                placeholder="Consulte casero..."
-                onChange={e => setConsulta(e.target.value)}
-            />
-            <input type="submit" value="Consultar sin compromiso" />
-        </form>
+        <div className='formulario'>
+        {!open?<div></div>:
+        <input
+            type="text"
+            placeholder="Buscar receta..."
+            onChange={(e) => {
+                setConsulta(e.target.value);
+                onSearch(e.target.value)
+            }}
+            value={consulta}
+        />
+        }
+        <div onClick={ () => setOpen(!open)}>
+            <BsSearch className='BsSearch'/>
+        </div>
+        </div>
     );
 }; 
