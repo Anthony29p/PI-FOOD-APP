@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 
-import bkg from './resources/landingPage-Dark.png';
+import bkg from './resources/optimized/landingPage-Dark.png';
 import './styles/LandingPage.css';
 
 
