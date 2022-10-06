@@ -11,7 +11,7 @@ export default function Card({ name,image,description,healthScore,howToDo }){
         <div className="card">
             <p>{name}</p>
             <p>HealthScore: {healthScore}</p>
-            <img src = {imagenFinal} alt =''/>
+            <img loading='lazy' src = {imagenFinal} alt =''/>
         </div>
     );
 };  

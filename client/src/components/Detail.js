@@ -40,11 +40,11 @@ export default function Detail (){
             { 
                 detail.length>0?    
                 <div className="menu">
-                    <div className="section01">
-                        <h1>{detail[0].name}</h1>
-                        <h5>{detail[0].description}</h5>
-                    </div>
                     <div className="section02">
+                        {detail[0].createdDB?
+                        <img src = {paella} alt =''/>:
+                        <img src = {detail[0].image} alt =''/>
+                        }
                         <h5>Health Score: {detail[0].healthScore}%</h5>
                         <div>
                         {
@@ -57,10 +57,10 @@ export default function Detail (){
                             ))
                         }
                         </div>
-                        {detail[0].createdDB?
-                        <img src = {paella} alt =''/>:
-                        <img src = {detail[0].image} alt =''/>
-                        }
+                    </div>
+                    <div className="section01">
+                        <h1>{detail[0].name}</h1>
+                        <h5>{detail[0].description}</h5>
                     </div>
                 </div>:
                 <div></div>
