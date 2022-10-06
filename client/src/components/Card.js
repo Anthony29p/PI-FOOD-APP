@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles/Card.css';
 
-import paella from './resources/paella.jpg';
+import paella from './resources/optimized/paella.png';
 
 export default function Card({ name,image,description,healthScore,howToDo }){
     const imagenFinal = image?image:paella

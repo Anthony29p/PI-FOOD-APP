@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { postRecipes, getDiets } from "../actions";
 
 import './styles/RecipeCreation.css';
-import gato from './resources/GatoCocinero.png';
+import gato from './resources/optimized/GatoCocinero.png';
 
 export default function RecipeCreation(){
 

@@ -6,7 +6,7 @@
     
 
     color: beige;
-    background: url(../resources/madera-fondo.png);
+    background: url(../resources/optimized/madera-fondo.png);
     background-position: center;
 
     width: 100%;
@@ -56,7 +56,7 @@ border: 0px;
     justify-content: center;
     flex-wrap: wrap;
 
-    background: url(../resources/menu.png);
+    background: url(../resources/optimized/menu.png);
     background-size: cover;
     background-position: center;
     width: 500px;
